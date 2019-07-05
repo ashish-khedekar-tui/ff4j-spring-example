@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ff4j xmlns="http://www.ff4j.org/schema/ff4j"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://ff4j.org/schema/ff4j-1.6.xsd">
+
+
+    <features>
+        <feature uid="allow.easyjet.enabled" enable="true" description="Allow Easyjet as they are OK."/>
+        <feature uid="holidays.discount.enabled" enable="false" description="Simple holiday discount"/>
+        <feature uid="customised.holidays.discount.enabled" enable="false" description="Holiday discount based on the price" >
+            <flipstrategy class="com.ak.ff4j.discounts.strategy.HigherPricedHolidayDiscountFlipStrategy" >
+
+            </flipstrategy>
+        </feature>
+    </features>
+
+</ff4j>

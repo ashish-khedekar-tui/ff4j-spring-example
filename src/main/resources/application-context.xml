@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="helloBean" class="com.ak.ff4j.HelloWorld">
+        <property name="name" value="John" />
+    </bean>
+
+    <!-- FF4J bean -->
+    <bean id="ff4j" class="org.ff4j.FF4j" >
+        <property name="featureStore"	ref="ff4j.store.inmemory" />
+    </bean>
+
+    <bean id="ff4j.store.inmemory" class="org.ff4j.store.InMemoryFeatureStore" >
+        <property name="location" value="ff4j.xml" />
+    </bean>
+
+    <bean id="flightBookingAgent" class="com.ak.ff4j.flights.impl.DefaultFlightBookingAgent">
+        <property name="ff4j" ref="ff4j"/>
+    </bean>
+
+    <bean id="discountService" class="com.ak.ff4j.discounts.impl.DefaultDiscountService">
+        <property name="ff4j" ref="ff4j"/>
+    </bean>
+
+    <bean class="com.ak.ff4j.discounts.strategy.HigherPricedHolidayDiscountFlipStrategy"/>
+
+    <bean id="ff4jProvider" class="com.ak.ff4j.DefaultFf4jProvider">
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+
+</beans>
