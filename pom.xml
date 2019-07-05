@@ -86,7 +86,7 @@
                 <configuration>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webApp>
-                        <contextPath>/hello</contextPath>
+                        <contextPath>/ff4j-poc</contextPath>
                     </webApp>
                     <httpConnector>
                         <port>8080</port>

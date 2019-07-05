@@ -14,8 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/tui")
-public class TuiController {
+public class SampleController {
 
     @Resource(name = "flightBookingAgent")
     private FlightBookingAgent flightBookingAgent;
