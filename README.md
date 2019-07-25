@@ -16,4 +16,4 @@ Run following command
 `http://localhost:8080/ff4j-poc/ff4j-console`
 
 ### How to access examples
-`http://localhost:8080/ff4j-poc/ff4j-poc/discount`  
+`http://localhost:8080/ff4j-poc/discount`  
