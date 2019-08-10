@@ -1,11 +1,10 @@
-package com.ak.ff4j;
+package com.ak.ff4j.controllers;
 
 import com.ak.ff4j.discounts.DiscountService;
 import com.ak.ff4j.discounts.model.HolidayPackage;
 import com.ak.ff4j.flights.FlightBookingAgent;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -56,7 +55,4 @@ public class SampleController {
 
         return holidayPackages;
     }
-
-
-
 }

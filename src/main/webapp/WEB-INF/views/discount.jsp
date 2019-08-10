@@ -6,12 +6,9 @@
 <head>
     <title>Discount calculator</title>
 </head>
-
 <body>
 
-
 <b>holidays.discount.enabled</b>
-
 
 <table border="1">
     <tr>
