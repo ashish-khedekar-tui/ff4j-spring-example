@@ -1,11 +1,11 @@
 package com.ak.ff4j;
 
 import org.ff4j.FF4j;
-import org.ff4j.web.FF4JProvider;
+import org.ff4j.web.FF4jProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
-public class DefaultFf4jProvider implements FF4JProvider {
+public class DefaultFf4jProvider implements FF4jProvider {
 
     @Autowired
     private FF4j ff4j;
